@@ -1,7 +1,8 @@
-fn main() {
-
-	let mut array_A = [31i, 41, 59, 26, 41, 58];
-	//let mut array_A = [5i,2,4,6,1,3];
+fn insertion_sort(array_A: &mut [int, ..6]) {
+	// Implementation of the traditional insertion sort algorithm in Rust
+	// The idea is to both learn the language and re visit classic (and not so much) 
+	// algorithms.
+	// This algorithm source has been extracted from "Introduction to Algorithms" - Cormen
 	let mut i: int;
 
 	//utility variable. Uggly hack to avoid casting back and foward from int to uint
@@ -25,6 +26,19 @@ fn main() {
 		
 	};
 
+}
+
+
+fn main() {
+	//This should be replaced eventually by the unit test framework.
+
+	let mut array_A = [31i, 41, 59, 26, 41, 58];
+	// let mut array_A = [5i,2,4,6,1,3];
+	
+
+	// Need to pass a reference, so the sorting function can modify the
+	// array being sorted (this is very similar to C lang).
+	insertion_sort(&mut array_A);
 
 	//Just for printing purposes
 	for j in range(0u, array_A.len()) {

@@ -5,7 +5,7 @@ fn insertion_sort(array_A: &mut [int, ..6]) {
 	// This algorithm source has been extracted from "Introduction to Algorithms" - Cormen
 	let mut i: int;
 
-	//utility variable. Uggly hack to avoid casting back and foward from int to uint
+	//utility variable. Ugly hack to avoid casting back and forward from int to uint
 	let mut i_u: uint; 
 	let mut key: int;
 
